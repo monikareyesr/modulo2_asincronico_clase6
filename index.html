@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>peliculas</title>
+</head>
+
+<body>
+    <script>
+        //declarar el arreglo con corchetes
+        let peliculas = [
+            { titulo: "Hanzel y gretel:cazadores de brujas", rating: "5", loHasVisto: true },
+            { titulo: "La bella y la bestia", rating: "4", loHasVisto: true },
+            { titulo: "El ultimo cazador de brujas", rating: "5", loHasVisto: true },
+            { titulo: "Las cronicas de Narnia", rating: "3", loHasVisto: true },
+            { titulo: "Five Nights At Freddy's ", rating: "2", loHasVisto: false },
+        ];
+
+        //recorrer el erreglo con un ciclo for
+        for (let i = 0; i < peliculas.length; i++) {
+            const pelicula = peliculas[i]
+            if (peliculas[i].loHasVisto == true) {
+                console.log("Viste" + " " + "'" + peliculas[i].titulo + "'" + " " + peliculas[i].rating + " " + "-" + " " + "estrellas");
+            } else {
+                console.log("No viste" + " " + "'" + peliculas[i].titulo + "'" + " " + peliculas[i].rating + " " + "-" + " " + "estrellas");
+            }
+        }
+
+        //         Debés crear una función llamada `arregloDeObjetos` que reciba un número y una
+        // palabra como parámetro y devuelva un arreglo de objetos que tenga: una
+        // propiedad llamada como la palabra pasada por parámetro y el valor del número y
+        // sus anteriores.
+        //         arregloDeObjetos(5, “hola”) debe retornar [{hola: 1}, {hola: 2},
+        // {hola: 3}, {hola: 4}, {hola: 5 }]
+        // arregloDeObjetos(3, “chau”) debe retornar [{chau: 1}, {chau: 2},
+        // {chau: 3}]
+
+        function arregloDeObjetos(numero, palabra) {    //crear funcion con sus parametros 
+            const Array = [] //crear arreglo vacio
+            for (let i = 1; i <= numero; i++) { //recorrer arreglo con un for
+                const objeto = {}  //crear objeto vacio
+                objeto[palabra] = i  //llenar objeto
+                Array.push(objeto)
+            }
+            return Array //retornar array
+        }
+
+
+
+    </script>
+</body>
+
+</html>
